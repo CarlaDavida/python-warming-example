@@ -3,7 +3,8 @@ from warming.plot.maps import World
 
 def main():
     """
-    test
+    I added some useless lines of doc.
+    Servus :)
     """
     summary = Summary()
     world = World()
