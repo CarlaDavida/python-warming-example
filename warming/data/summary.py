@@ -1,9 +1,15 @@
+import os
+import pathlib
 import pandas as pb
+
 
 class Summary:
 
     def __init__(self):
-        self._filepath = "./data/41558_2023_1605_MOESM2_ESM.xlsx"
+        self._filepath = os.path.join(pathlib.Path.home(), 'PycharmProjects', 'python-warming-example', 'data',
+                                      '41558_2023_1605_MOESM2_ESM.xlsx')
+        # "./data/41558_2023_1605_MOESM2_ESM.xlsx"
+
         self._data = self.prepare_data()
 
     def prepare_data(self):
@@ -26,3 +32,19 @@ class Summary:
         :rtype: pandas.core.series.Series
         """
         return self._data["CO2C"]
+
+    def ch4c(self):
+        """
+        returns data of 'CH4C' for all countries
+        :return: `CH4C` data per capity per country.
+        :rtype: pandas.core.series.Series
+        """
+        return self._data["CH4C"]
+
+
+
+
+if __name__ == "__main__":
+    sume = Summary()
+    print(sume._data)
+
