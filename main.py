@@ -2,6 +2,9 @@ from warming.data.summary import Summary
 from warming.plot.maps import World
 
 def main():
+    """
+    test
+    """
     summary = Summary()
     world = World()
     world.show(summary.co2(), "CO2C")
